@@ -49,7 +49,7 @@ class AuthPage extends StatelessWidget {
                     ],
                   ),
                   child: const Text(
-                    'Auntenticação',
+                    'innovareti',
                     style: TextStyle(
                       fontSize: 45,
                       fontFamily: 'Anton',
