@@ -15,8 +15,8 @@ class AuthPage extends StatelessWidget {
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Color.fromRGBO(215, 117, 255, 0.5),
-                  Color.fromRGBO(45, 24, 150, 0.898),
+                  Color.fromRGBO(17, 17, 17, 0.498),
+                  Color.fromRGBO(161, 51, 15, 0.898),
                 ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -39,7 +39,7 @@ class AuthPage extends StatelessWidget {
                   transform: Matrix4.rotationZ(-8 * pi / 180)..translate(-10.0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: const Color.fromARGB(255, 9, 9, 9),
+                    color: const Color.fromARGB(255, 14, 14, 14),
                     boxShadow: const [
                       BoxShadow(
                         blurRadius: 8,

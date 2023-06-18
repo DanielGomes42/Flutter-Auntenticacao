@@ -7,11 +7,14 @@ import 'package:shop/models/product.dart';
 import 'package:shop/utils/constants.dart';
 
 class ProductList with ChangeNotifier {
-  final List<Product> _items = [];
+  final String _token;
+  List<Product> _items = [];
 
   List<Product> get items => [..._items];
   List<Product> get favoriteItems =>
       _items.where((prod) => prod.isFavorite).toList();
+
+  ProductList(this._token, this._items);
 
   int get itemsCount {
     return _items.length;
@@ -21,7 +24,8 @@ class ProductList with ChangeNotifier {
     _items.clear();
 
     final response = await http.get(
-      Uri.parse('${Constants.productBaseUrl}.json'),
+      Uri.parse(
+          'https://api.projetos.innovareti.com.br/api/public/v1/new_tickets?sentByEmail=candidato@innovareti.com.br&ticketCode=&subject=&processName=&statusId=&createdAt=$_token'),
     );
     if (response.body == 'null') return;
     Map<String, dynamic> data = jsonDecode(response.body);
